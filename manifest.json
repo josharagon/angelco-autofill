@@ -1,0 +1,18 @@
+{
+    "name": "cv-buddy",
+    "description": "auto fill angel.co cv",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+      },
+      "content_scripts": [{
+        "matches": ["https://angel.co/*"],
+        "js": ["content.js"]
+      }],
+      "permissions": ["storage", "activeTab", "scripting", "declarativeContent"],
+      "action": {
+        "default_popup": "popup.html"
+      },
+      "options_page": "options.html"
+  }
